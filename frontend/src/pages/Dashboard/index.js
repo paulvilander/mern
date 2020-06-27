@@ -23,9 +23,8 @@ export default function Dashboard({history}){
 
     const toggle = () => setDropdownOpen(!dropdownOpen);
 
-    useEffect(() =>{
-       getEvents()
-   },[])
+    // eslint-disable-next-line
+    useEffect(() =>{ getEvents() },[])
 
    const socket = useMemo(
         () =>

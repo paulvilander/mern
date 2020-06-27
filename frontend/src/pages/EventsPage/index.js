@@ -17,10 +17,8 @@ export default function EventsPages({history}){
     const [dropdownOpen, setOpen] = useState(false);
     const user = localStorage.getItem('user');
 
-    useEffect(()=>{
-        if(!user) history.push('/login');
-    },[])
-
+    // eslint-disable-next-line
+    useEffect(()=>{ if(!user) history.push('/login') },[])
 
     const toggle = () => setOpen(!dropdownOpen);
 

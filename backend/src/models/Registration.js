@@ -3,7 +3,11 @@ const mongoose = require("mongoose");
 const RegistrationSchema = new mongoose.Schema({
     date: () => Date.now(),
     approved: Boolean,
-    sport: String,
+    owner: String,
+    eventTitle : String,
+    eventPrice : String,
+    eventDate : String,
+    userEmail : String,
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
